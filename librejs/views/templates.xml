@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Inline blanket license notice + hidden jslicense link on every page
+         (both frontend and backend render through web.layout). -->
+    <template id="layout_notice" inherit_id="web.layout" name="LibreJS license notice">
+        <xpath expr="//head/script[@id='web.layout.odooscript']" position="after">
+            <script type="text/javascript">
+                /* @licstart  The following is the entire license notice for the
+                JavaScript code in this page.
+
+                Copyright (C) Odoo S.A. and contributors
+
+                The JavaScript code in this page is free software: you can
+                redistribute it and/or modify it under the terms of the GNU
+                Lesser General Public License (GNU LGPL) as published by the
+                Free Software Foundation, either version 3 of the License, or
+                (at your option) any later version.  The code is distributed
+                WITHOUT ANY WARRANTY; without even the implied warranty of
+                MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+                GNU LGPL for more details.
+
+                As additional permission under GNU LGPL version 3 section 7, you
+                may distribute non-source (e.g., minimized or compacted) forms of
+                that code without the copy of the GNU LGPL normally required by
+                section 4, provided you include this license notice and a URL
+                through which recipients can access the Corresponding Source.
+
+                @licend  The above is the entire license notice
+                for the JavaScript code in this page. */
+            </script>
+        </xpath>
+        <xpath expr="//body" position="inside">
+            <a href="/web/jslicense" rel="jslicense" style="display:none">JavaScript licenses</a>
+        </xpath>
+    </template>
+
+    <!-- JavaScript License Web Labels table, LibreJS convention. -->
+    <template id="weblabels" name="JavaScript License Web Labels">&lt;!DOCTYPE html&gt;
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>JavaScript License Web Labels</title>
+    </head>
+    <body>
+        <h2>Web Labels</h2>
+        <table id="jslicense-labels1" border="1">
+            <tr t-foreach="scripts" t-as="src">
+                <td><a t-att-href="src" t-out="src"/></td>
+                <td><a t-att-href="license_url" t-out="license_name"/></td>
+                <td><a t-att-href="source_url">Odoo sources</a></td>
+            </tr>
+        </table>
+    </body>
+</html>
+    </template>
+
+</odoo>
